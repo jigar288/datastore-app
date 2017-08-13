@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Howdy</title>
+
+<style>
+.nc {
+  color:{{ fav_color }};
+}
+
+</style>
+
+
+  </head>
+  <body>
+
+        {% if name_entered == "jigar" %}
+        {% for i in range(rnumber) %}
+        Jigar<br>
+
+        {% endfor %}
+        {% else %}
+        Hello {{ name_entered }}
+        {% endif %}
+        <ol>
+        {% for listItem in getList %}
+          <li>{{listItem.kind}}</li>
+          <br/>
+        {% endfor %}
+      </ol>
+
+
+    <h1 class="nc"> {{ greeting }} {{ name_entered }} {{ fav_color }}</h1>
+    <h1>My handler works (w/ templates)</h1>
+    <img src="resources/milk.jpg">
+    <form action="/snack">
+      What is your name? <input name="my_name" type="text">
+      What is your favorite color? <input name="fav_color" type="text">
+      How many times do you want to print you name below? <input name="rnumber" type="text">
+      What snack do you want to add <input name="my_snack" type="text">
+      What is your snack rating? <input name="my_rating" type="text">
+      What is your snack quantity? <input name="my_quantity" type="text">
+      What is your snack calories? <input name="my_calories" type="text">
+
+
+
+
+
+      <input type="submit">
+
+<!--
+make it so that if nothing is entered do if statements for defaults
+make text change color when submitted
+#re-do the rutabega activity with form submission
+#ADD  a loop to print something
+#change the number of things that print based on whats entered in the url
+
+-->
+    </form>
+
+    <!-- {% if name_entered == "rutabega" %}
+    rutabegas are dumb
+    {% else %}
+    Those {{ name_entered }} are good
+    {% endif %} -->
+
+
+
+
+
+
+
+
+  </body>
+</html>
